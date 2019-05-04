@@ -86,4 +86,15 @@
         }
 
 
+        /**
+         * <b>Retorna o nome do dia da Semana com base em uma data</b>
+         * @param DATETIME $Data = Data no formato WC AAAA-MM-DD ----> (2019-05-01)
+         * @return STRING = Retorna o nome do dia da Semana ----> Segunda-Feira, Terça-Feira, Quarta-Feira...
+         */
+        public static function getDayWeekName($Data){
+            $day_week_number = date("w", strtotime($Data));
+            $days_week_names = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+            return $days_week_names[$day_week_number];
+        }
+
     }
